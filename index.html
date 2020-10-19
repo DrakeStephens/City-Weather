@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+
+<body class="bg-dark">
+    <header class="bg-primary p-2">
+        <h1 class="header text-center text text-white">Weather Dashboard</h1>
+    </header>
+    <section class="container mt-5">
+        <div class="row bg-light">
+            <div class="bg-light p-4">
+                <p class="search-text my-1">Search For a City</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" class="form-control" type="text" placeholder="Enter City Name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear History</button>
+                <form id="history"></form>
+            </div>
+            <div class="mr-0 col-8 border-black">
+                <div class="col-12 border m-3 rounded">
+                    <div class="row">
+                        <div class="col-12">
+                            <span id="city-name" class="city-name align-middle"></span>
+                            <img id="weather-pic" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="temperature"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="humidity"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="wind-speed"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="UV-index"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class=" text-center container bg-light border-black">
+        <div class="row">
+            <div class="col-12">
+                <h3>5-Day Forecast</h3>
+            </div>
+        </div>
+        <div class="border-top p-2">
+            <div class="row m-3">
+                <div class="col-2 days bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col-2 days bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col-2 days bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col-2 days bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col-2 days bg-primary text-white ml-3 mb-3 rounded"></div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <footer class="bg-primary mt-5 fixed-bottom">
+        <h3 class="p-4">ThankYou for visiting!</h3>
+    </footer>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./java.js"></script>
+</body>
+
+</html>
