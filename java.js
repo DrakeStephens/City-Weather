@@ -1,14 +1,18 @@
-  function pageGenerate() {
-    const inputEl = document.getElementById("city-input");
-    const searchEl = document.getElementById("searchBtn");
-    const historyEl = document.getElementById("history");
-    const clearEl = document.getElementById("clear-history");
-    const cityEl = document.getElementById("city-name");
-    const temperatureEl = document.getElementById("temperature");
-    const humidityEl = document.getElementById("humidity");
-    const windSpeedEl = document.getElementById("wind-speed");
-    const UVElement = document.getElementById("UV-index");
-    const pictureEl = document.getElementById("weather-pic");
+// elements
+const inputEl = document.getElementById("city-input");
+const searchEl = document.getElementById("searchBtn");
+const historyEl = document.getElementById("history");
+const clearEl = document.getElementById("clear-history");
+const cityEl = document.getElementById("city-name");
+const temperatureEl = document.getElementById("temperature");
+const humidityEl = document.getElementById("humidity");
+const windSpeedEl = document.getElementById("wind-speed");
+const UVElement = document.getElementById("UV-index");
+const pictureEl = document.getElementById("weather-pic");
+const forecastEls = document.querySelectorAll(".days");
+
+function pageGenerate() {
+
   
     const APIKey = "4c56979874845d3177ce813ce4e4b00f"
   
@@ -56,7 +60,6 @@
       let forecastQueryURL = `https://api.openweathermap.org/data/2.5/forecast?id=${cityID}&appid=${APIKey}`;
       axios.get(forecastQueryURL)
       .then(function(response){
-        const forecastEls = document.querySelectorAll(".days");
         for (i=0; i<forecastEls.length; i++) {
             forecastEls[i].innerHTML = "";
             const forecastIndex = i * 8 + 4;
